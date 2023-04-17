@@ -1,0 +1,101 @@
+/* selector general */
+/* selector specificity: ID   classes, atributos e pseudo-classes  elementos e pseudo-elementos 
+ !important => o navegador sobreescrever o seletor de especifidade
+eh preferivel usar classes nas tags
+ */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+.grid {
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 73px;
+
+
+}
+
+
+.grid:after {
+    content: '';
+    display: block;
+    clear:both;
+}
+
+
+.grid .col {
+    height: 300px;
+    width: 300px;
+    float: left;
+    padding: 15px;
+    margin:20px;
+}
+
+.grid .col-content {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 5px gray;
+    background: red;
+    /* border-radius: 50%; circulo */
+
+
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    background: black;
+    
+
+}
+
+.menu ul{
+    list-style: none;
+    display: block;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li a{
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover{
+    background: #333;
+
+}
+
+.full-page {
+    max-width: 1200px;
+   
+    padding-top: 73px;
+    height: 100vh;
+    background: turquoise;
+}
+
+.full-page-content {
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
