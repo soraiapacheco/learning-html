@@ -17,85 +17,53 @@ body {
 html {
     scroll-behavior: smooth;
 
-}
-.grid {
-    max-width: 1200px;
-    padding: 15px;
-    margin: 0 auto;
-    padding-top: 73px;
-
 
 }
 
-
-.grid:after {
-    content: '';
-    display: block;
-    clear:both;
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    background: yellow;
+    /*flex-direction: row;*/
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start; /* strech - estica os elementos até altura do conteúdo principal*/
+    height: 800px;
+    /*height: 100px;
+    display: flex;
+    flex-wrap: wrap; se nao tiver espaco para ocupar quebra a linha 
+   */
 }
 
+.flex-item {
+    width: 32%;
+    height: 200px;
+    /*flex-grow: 1;
+    flex-basis: 320px;
+    flex-shrink: 1; /* nao permite que o elemento diminui com a diminuicao da tela 
 
-.grid .col {
-    height: 300px;
-    width: 300px;
-    float: left;
-    padding: 15px;
-    margin:20px;
-}
-
-.grid .col-content {
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 5px 5px gray;
+    utilize o atalho abaixo (eh recomendavel que sempre utilize o atalho!):
+    */ 
+    flex: 1 1 320px;
     background: red;
-    /* border-radius: 50%; circulo */
-
-
-}
-
-.menu {
-    width: 100%;
-    position: fixed;
-    background: black;
-    
-
-}
-
-.menu ul{
-    list-style: none;
-    display: block;
-    max-width: 1200px;
-    padding: 0 30px;
-    margin: 0 auto;
-}
-
-.menu ul li {
-    float: left;
-}
-
-.menu ul li a{
-    display: block;
+    margin-bottom: 2%;
     color: white;
-    padding: 20px;
-    text-decoration: none;
-    transition: all 300ms ease-in-out;
-}
-
-.menu ul li a:hover{
-    background: #333;
 
 }
 
-.full-page {
-    max-width: 1200px;
-   
-    padding-top: 73px;
-    height: 100vh;
-    background: turquoise;
+.flex-item:nth-child(2) {
+    flex: 2 1 320px; /* o espaco que sobrar devido o flex-grow=2 usara 2 vezes mais */
+    background: purple;
+    align-self: center;
+    order: 4;
 }
 
-.full-page-content {
-    max-width: 1200px;
-    padding: 0 30px;
-    margin: 0 auto;
+.flex-item:nth-child(3) {
+    font-size: 40px;
+    align-self: flex-end;
+}
+
+.flex-item:nth-child(4) {
+    align-self: stretch;
+
 }
